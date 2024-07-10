@@ -1,0 +1,768 @@
+// app global css in Sass form
+
+body
+  width: 100%
+  height: 100svh
+  margin: 0
+  padding: 0
+
+  *
+    padding: 0
+    margin: 0
+    text-decoration: none
+    font-family: "Montserrat", sans-serif
+    font-optical-sizing: auto
+    font-style: normal
+
+.header-parent
+  display: block
+  width: 100%
+  height: 550px
+  position: relative
+  overflow: hidden
+
+.header-parent::before
+  display: block
+  content: ''
+  width: 100%
+  height: 100%
+  background: rgba(0, 73, 112, 0.922)
+  position: absolute
+  top: 0
+  left: 0
+  z-index: -1
+
+.header-parent::after
+  display: block
+  content: ''
+  width: 20%
+  height: 70%
+  background: rgb(255, 255, 255)
+  position: absolute
+  bottom: 0
+  left: 10%
+  border-radius: 100px 100px 0 0
+  z-index: -1
+
+.hero-section-logos-contianer
+  width: 20%
+  height: 70%
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
+  position: absolute
+  left: 10%
+  bottom: 0
+
+.hero-section-logos-contianer1
+  display: none
+
+.hero-section-logos-contianer>img:nth-child(1)
+  width: 43%
+
+.hero-section-logos-contianer>img:nth-child(2)
+  width: 60%
+
+.hero-section-logos-contianer>img:nth-child(3)
+  width: 52%
+
+.header-parent>img
+  width: 100%
+  position: absolute
+  top: -120px
+  left: 0
+  z-index: -2
+
+.grey-logo
+  width: 20%
+  height: 100%
+  overflow: hidden
+  display: flex
+  justify-content: left
+  padding: 0 0 0 3%
+  align-items: center
+
+.grey-logo>img
+  width: 55%
+
+.header-container
+  display: flex
+  width: 98%
+  height: 12%
+  padding: 10px 3%
+  margin: auto
+  justify-content: space-between
+  background: white
+  border-radius: 0 0 100px 100px
+
+.header-nav
+  display: flex
+  width: 45%
+  height: 100%
+  justify-content: center
+  align-items: center
+
+.header-nav>ul
+  display: flex
+  width: 100%
+  height: 100%
+  padding: 0 20px
+  justify-content: space-around
+  align-items: center
+  list-style: none
+  background: rgba(0, 73, 112, 0.074)
+  border-radius: 100px
+
+.header-nav>ul>li
+  font-size: 1.3em
+
+.header-nav>ul>li>a
+  color: rgb(0, 38, 58)
+  font-weight: 600
+  transition: color .3s
+
+.header-nav>ul>li>.active-nav
+  color: rgb(176, 141, 16)
+
+.header-nav>ul>li>.nav-button:hover
+  color: rgb(176, 141, 16)
+
+/*  */
+
+.hero-section-main-contianer
+  background: rgba(255, 255, 255, 0)
+  width: 100%
+  height: 88%
+  display: flex
+  justify-content: center
+  align-items: center
+
+.hero-section-contianer
+  width: 100%
+  height: 100%
+  flex-direction: column
+  display: flex
+  justify-content: right
+  align-items: flex-end
+
+.hero-section-contianer .button-container
+  width: 70%
+  height: 15%
+  padding-left: 6%
+  display: flex
+  align-items: center
+
+.hero-section-contianer .button-container1
+  display: none
+
+.button-container>a
+  display: flex
+  margin-top: -50px
+  background: rgb(255, 170, 0)
+  color: #fff
+  font-size: 1em
+  font-weight: 700
+  text-decoration: none
+  border-radius: 5px
+  outline: 1px solid rgb(255, 170, 0)
+  outline-offset: 5px
+  box-sizing: border-box
+  height: 30px
+  width: 140px
+  padding: 10px
+  box-sizing: content-box
+  justify-content: center
+  align-items: center
+  animation: outline .9s infinite ease-in-out
+
+.button-container>a>img
+  width: 25px
+  margin-top: 5px
+  animation: arrow .9s infinite ease-in-out
+
+@keyframes outline
+  0%
+    outline-offset: 8px
+
+  50%
+    outline-offset: 5px
+
+  100%
+    outline-offset: 8px
+
+@keyframes arrow
+  0%
+    transform: translateX(0px)
+
+  50%
+    transform: translateX(15px)
+
+  100%
+    transform: translateX(0px)
+
+.button-container>a:hover
+  animation-name: none
+
+.hero-section-text-contianer
+  width: 70%
+  height: 85%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: 6%
+
+.hero-section-text-contianer>h1
+  width: 100%
+  font-size: 355%
+  line-height: 1.2
+  text-align: right
+  font-family: Arial, sans-serif
+  font-weight: 800
+  color: rgb(255, 170, 0)
+
+.hero-section-text-contianer>.hh6
+  width: 100%
+  display: flex
+  justify-content: right
+  margin: 18px
+
+.hero-section-text-contianer>.hh6>h6
+  font-size: 1.6em
+  text-align: right
+  width: fit-content
+  padding: 10px
+  background: rgb(255, 170, 0)
+  font-weight: 600
+  border-radius: 10px
+
+
+.hero-section-text-contianer>p
+  width: 100%
+  font-size: 1.7em
+  font-family: Arial, sans-serif
+  color: white
+  text-align: left
+
+.content .button-container > a
+  margin: 0
+
+.gscert
+  padding: 15px
+
+/*  */
+
+.footer-main-container
+  width: 100%
+  height: 490px
+  background: rgba(0, 73, 112, 0.074)
+  position: relative
+  margin-top: 150px
+
+.footer-main-container .floating-bar
+  width: 75%
+  background: rgba(0, 73, 112)
+  height: 130px
+  margin: auto
+  transform: translateY(-40px)
+  box-shadow: -18px -18px rgba(0, 73, 112, 0.201)
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 40px
+
+.floating-bar .button-container>a
+  margin: 0
+
+.floating-bar
+  .footer-floating-text-container
+    h3,p
+      margin: 10px 0
+
+.floating-bar
+  .footer-floating-text-container
+    h3
+      color: white
+
+.floating-bar
+  .footer-floating-text-container
+    p
+      font-size: 1.5em
+      color: rgb(255, 170, 0)
+
+.footer-contents-sub-container
+  width: 75%
+  height: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 75px 0 0 0
+
+.footer-contents-container
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  z-index: -1
+  display: flex
+  justify-content: center
+  align-items: center
+
+.footer-content-container
+  width: 30%
+  min-height: 50%
+  line-height: 2.3
+
+.footer-content-container p
+  font-weight: 500
+
+.footer-content-container .footer-header
+  font-size: 1.2em
+  font-weight: 600
+  color: rgba(0, 73, 112)
+
+.footer-content-container.footer-col-2,
+.footer-content-container.footer-col-3
+  display: flex
+  justify-content: center
+
+.footerBtn
+  display: none
+
+/* */
+
+.content
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+
+.content p
+  font-size: 1.3em
+
+.content h3,
+.content p
+  margin: 20px 0
+
+.content.odd
+  padding: 0 0 0 50px
+  color: white
+
+.my-card
+  padding: 30px 100px
+
+.my-card.addmarg
+  margin: 30px 0
+
+.content.even
+  padding: 0 50px 0 0
+
+.my-card.backdrop
+  background: rgb(0, 73, 112)
+
+.notice
+  background: rgb(255, 170, 0)
+  padding: 50px 150px
+  text-align: center
+  font-size: 1.6em
+  line-height: 2
+  font-weight: 600
+  // color: white
+
+
+
+  // Mobile
+@media (max-width: 512px)
+    
+  .header-parent
+    display: block
+    width: 100%
+    height: 400px
+    position: relative
+    overflow: hidden
+    padding-top: 80px
+
+  .header-parent::before
+    display: block
+    content: ''
+    width: 100%
+    height: 100%
+    background: rgba(0, 73, 112, 0.922)
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+
+  .header-parent::after
+    display: none
+    content: ''
+    width: 20%
+    height: 70%
+    background: rgb(255, 255, 255)
+    position: absolute
+    bottom: 0
+    left: 10%
+    border-radius: 100px 100px 0 0
+    z-index: -1
+
+  .hero-section-logos-contianer
+    width: 20%
+    height: 70%
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    position: static
+    left: 10%
+    bottom: 0
+    background: red
+    display: none
+
+
+  .hero-section-logos-contianer1
+    width: 100%
+    height: 60px
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    left: 10%
+    bottom: 0
+    margin: 5px
+    padding: 5px
+    border-radius: 100px
+    background: white
+
+  .hero-section-logos-contianer1>img:nth-child(1)
+    width: 15%
+
+  .hero-section-logos-contianer1>img:nth-child(2)
+    width: 25%
+
+  .hero-section-logos-contianer1>img:nth-child(3)
+    width: 20%
+
+  .header-parent>img
+    width: 170%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -2
+
+  .grey-logo
+    overflow: hidden
+    height: fit-content
+    width: 100%
+    display: flex
+    margin: 7px 0
+    justify-conten: center
+
+  .grey-logo>img
+    width: 70px
+    margin: auto
+    
+
+  .header-container
+    display: block
+    width: 98%
+    height: 50px
+    margin: auto
+    overflow: hidden
+    background: white
+    padding-bottom: 50px
+    transition: all .3s
+    border-radius: 0 0 60px 60px
+
+  .header-nav
+    width: 100%
+    display: flex
+    flex-direction: column
+
+  .header-nav>ul
+    padding: 0
+    list-style: none
+    display: flex
+    justify-content: center
+    flex-direction: column
+    background: rgba(11, 144, 215, 0.074)
+    border: none
+    height: 97%
+    overflow: hidden
+    border-radius: 0 0 50px 50px
+
+  .header-nav>ul>li
+    font-size: 1.3em
+    background: none
+    padding: 8px
+    border: none
+
+  .header-nav>ul>li>a
+    color: rgb(0, 38, 58)
+    font-weight: 600
+    transition: color .3s
+    border: none
+
+  .header-nav>ul>li>.active-nav
+    color: rgb(176, 141, 16)
+
+  .header-nav>ul>li>.nav-button:hover
+    color: rgb(176, 141, 16)
+
+  /*  */
+
+  .hero-section-main-contianer
+    background: rgba(255, 255, 255, 0)
+    width: 100%
+    height: 88%
+    display: flex
+    justify-content: center
+    align-items: center
+    background: none
+
+  .hero-section-contianer
+    width: 100%
+    height: 100%
+    flex-direction: column
+    display: flex
+    justify-content: center
+    align-items: center
+    background: none
+
+  .hero-section-contianer .button-container
+    display: none
+
+  .hero-section-contianer .button-container1
+    width: 70%
+    height: 15%
+    display: flex
+    align-items: center
+    justify-content: center
+    background: none
+    margin: 10px
+
+  .button-container1>a
+    display: flex
+    background: rgb(255, 170, 0)
+    color: #fff
+    font-size: 1em
+    font-weight: 600
+    text-decoration: none
+    border-radius: 5px
+    outline: 1px solid rgb(255, 170, 0)
+    outline-offset: 5px
+    box-sizing: border-box
+    height: 30px
+    width: 140px
+    padding: 3px
+    box-sizing: content-box
+    justify-content: center
+    align-items: center
+    animation: outline .9s infinite ease-in-out
+
+  .button-container1>a>img
+    width: 20px
+    margin-top: 5px
+    animation: arrow .9s infinite ease-in-out
+
+  @keyframes outline
+    0%
+      outline-offset: 6px
+
+    50%
+      outline-offset: 3px
+
+    100%
+      outline-offset: 6px
+
+  @keyframes arrow
+    0%
+      transform: translateX(0px)
+
+    50%
+      transform: translateX(10px)
+
+    100%
+      transform: translateX(0px)
+
+  .button-container>a:hover
+    animation-name: none
+
+  .hero-section-text-contianer
+    width: 100%
+    height: 85%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 6%
+
+  .hero-section-text-contianer>h1
+    width: 100%
+    font-size: 1.9em
+    line-height: 1.2
+    text-align: center
+    font-family: Arial, sans-serif
+    font-weight: 800
+    margin-bottom: 4px
+    color: rgb(255, 170, 0)
+
+  .hero-section-text-contianer>.hh6
+    width: 100%
+    display: flex
+    justify-content: center
+    margin: 0px
+
+  .hero-section-text-contianer>.hh6>h6
+    font-size: 1em
+    text-align: center
+    width: fit-content
+    padding: 0 5px
+    background: rgb(255, 170, 0)
+    font-weight: 600
+    border-radius: 10px
+
+
+  .hero-section-text-contianer>p
+    width: 100%
+    font-size: .9em
+    font-family: Arial, sans-serif
+    color: white
+    text-align: center
+    margin-top: 10px
+
+  .content .button-container > a
+    margin: 0
+
+  .gscert
+    padding: 15px
+
+  /*  */
+
+  .footer-main-container
+    width: 100%
+    height: 690px
+    background: rgba(0, 73, 112, 0.074)
+    position: relative
+    margin-top: 150px
+
+  .footer-main-container .floating-bar
+    width: 90%
+    background: rgba(0, 73, 112)
+    height: 215px
+    margin: auto
+    transform: translateY(-40px)
+    box-shadow: -18px -18px rgba(0, 73, 112, 0.201)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    padding: 0 50px 0 20px
+
+
+  .floating-bar .button-container
+    display: none
+
+  .floating-bar .button-container>a
+    margin: 0
+
+  .floating-bar
+    .footer-floating-text-container
+      h3,p
+        margin: 10px 0
+
+  .floating-bar
+    .footer-floating-text-container
+      h3
+        color: white
+        font-size: 2.2em
+        line-height: 1.3
+
+  .floating-bar
+    .footer-floating-text-container
+      p
+        font-size: 1em
+        color: rgb(255, 170, 0)
+        margin: 0 0 15px 0
+
+  .footer-contents-sub-container
+    width: 100%
+    height: 100%
+    display: block
+    flex-direction: none
+    justify-content: space-evenly
+    align-items: flex-start
+    padding: 200px 0 0 0px
+
+  .footer-contents-container
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    display: block
+    justify-content: left
+    align-items: center
+
+  .footer-content-container
+    width: 100%
+    min-height: 0%
+    line-height: 2.2
+    margin: 15px 0 0 0
+    padding: 0 0 0 20px
+    background: none
+
+  .footer-content-container p
+    font-weight: 500
+    font-size: .8em
+
+  .footer-content-container .footer-header
+    font-size: 1.1em
+    font-weight: 600
+    color: rgba(0, 73, 112)
+
+  .footer-content-container.footer-col-2,
+  .footer-content-container.footer-col-3
+    display: block
+    justify-content: left
+
+  /* */
+
+  .content
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+
+  .content p
+    font-size: 1.3em
+
+  .content h3,
+  .content p
+    margin: 20px 0
+
+  .content.odd
+    padding: 0 0 0 50px
+    color: white
+
+  .my-card
+    padding: 30px 100px
+
+  .my-card.addmarg
+    margin: 30px 0
+
+  .content.even
+    padding: 0 50px 0 0
+
+  .my-card.backdrop
+    background: rgb(0, 73, 112)
+
+  .notice
+    background: rgb(255, 170, 0)
+    padding: 50px 150px
+    text-align: center
+    font-size: 1.6em
+    line-height: 2
+    font-weight: 600
+    // color: white
