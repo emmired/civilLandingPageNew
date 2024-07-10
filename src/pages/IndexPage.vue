@@ -2,7 +2,7 @@
   <q-page class="">
     <!-- Header Section-->
     <div class="header-parent">
-      <img src="/bg.jpg" alt="">
+      <img src="/bg.jpeg" alt="">
       <div class="hero-section-logos-contianer">
         <img src="/galH.png" alt="">
         <img src="/Medea.png" alt="">
@@ -17,11 +17,11 @@
         </div>
         <nav class="header-nav">
           <ul>
-            <li><a class="nav-button active-nav" href="#">Home</a></li>
-            <li><a class="nav-button" href="#">About</a></li>
-            <li><a class="nav-button" href="#">Tuition Fees</a></li>
-            <li><a class="nav-button" href="#">Documents</a></li>
-            <li><a class="nav-button" href="#">Contact</a></li>
+            <li style="cursor: pointer"><a class="nav-button active-nav" href="#">Home</a></li>
+            <li style="cursor: pointer"><a class="nav-button" @click="scrollToSection('about')">About</a></li>
+            <li style="cursor: pointer"><a class="nav-button" @click="scrollToSection('fee')">Tuition Fees</a></li>
+            <li style="cursor: pointer"><a class="nav-button" @click="scrollToSection('document')">Documents</a></li>
+            <li style="cursor: pointer"><a class="nav-button" @click="scrollToSection('contact')">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -32,11 +32,11 @@
         </div>
         <nav class="header-nav">
           <ul>
-            <li><a class="nav-button active-nav" href="#">Home</a></li>
-            <li><a class="nav-button" href="#">About</a></li>
-            <li><a class="nav-button" href="#">Tuition Fees</a></li>
-            <li><a class="nav-button" href="#">Documents</a></li>
-            <li><a class="nav-button" href="#">Contact</a></li>
+            <li style="cursor: pointer"><a class="nav-buttonD active-navD" href="#">Home</a></li>
+            <li style="cursor: pointer"><a class="nav-buttonD" @click="scrollToSection('aboutD')">About</a></li>
+            <li style="cursor: pointer"><a class="nav-buttonD" @click="scrollToSection('feeD')">Tuition Fees</a></li>
+            <li style="cursor: pointer"><a class="nav-buttonD" @click="scrollToSection('documentD')">Documents</a></li>
+            <li style="cursor: pointer"><a class="nav-buttonD" @click="scrollToSection('contact')">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -130,7 +130,7 @@
       </div>
     </div>
 
-    <q-card class="my-card desktop-hide" flat style="padding: 0 10px">
+    <q-card id="about" class="my-card desktop-hide" flat style="padding: 0 10px">
       <q-card-section >
 
         <div class="content" style="display: flex; flex-direction: column; justify-content: center;">
@@ -152,7 +152,7 @@
       </q-card-section>
     </q-card>
 
-    <q-card class="my-card mobile-hide" flat style="padding: 0 120px">
+    <q-card id="aboutD" class="my-card mobile-hide" flat style="padding: 0 120px">
       <q-card-section horizontal>
 
         <div class="content q-pa-xl" style="display: flex; flex-direction: column; justify-content: center;">
@@ -177,7 +177,7 @@
     <!-- Main content Section for mobile-->
     <div class="main-section-container desktop-hide">
 
-      <q-card class="my-card addmarg backdrop" flat style="margin: ; padding: 0">
+      <q-card id="" class="my-card addmarg backdrop" flat style="margin: ; padding: 0">
         <q-card-section>
           <q-img class="col-12" src="/job.jpg" />
 
@@ -211,7 +211,7 @@
       </q-card>
 
 
-      <q-card class="my-card addmarg backdrop" flat style="margin: ; padding: 0">
+      <q-card id="fee" class="my-card addmarg backdrop" flat style="margin: ; padding: 0">
         <q-card-section >
           <q-img class="col-5" src="/payfee.png" />
 
@@ -234,7 +234,7 @@
 
 
 
-      <q-card class="my-card addmarg" flat style="margin: ; padding: 0">
+      <q-card id="document" class="my-card addmarg" flat style="margin: ; padding: 0">
         <q-card-section >
 
           <div class="content even" style="padding-left: 26px; padding-right: 15px">
@@ -302,7 +302,7 @@
       </q-card>
 
 
-      <q-card class="my-card addmarg backdrop" flat>
+      <q-card id="feeD" class="my-card addmarg backdrop" flat>
         <q-card-section horizontal>
           <q-img class="col-5" src="/payfee.png" />
 
@@ -325,7 +325,7 @@
 
 
 
-      <q-card class="my-card addmarg" flat>
+      <q-card id="documentD" class="my-card addmarg" flat>
         <q-card-section horizontal>
 
           <div class="content even">
@@ -374,7 +374,7 @@
     <div class="notice mobile-hide">
       <div style="padding: 15px; width: fit-content; background: black; margin: auto;
       ">
-        <h4 style="color: rgb(176, 141, 16); font-weight: 600">Note</h4>
+        <h4 style="color: rgb(176, 141, 16); font-weight: 600" @click="scrollToSection">Note</h4>
       </div>
       <p>Ensure to contact Greysoft Technologies Nigeria before enrolling.</p>
 
@@ -386,7 +386,7 @@
     </div>
 
     <!-- Footer Section -->
-    <div class="footer-main-container">
+    <div id="contact" class="footer-main-container">
       <div class="floating-bar">
         <div class="footer-floating-text-container">
           <h3>Ready to start learning?</h3>
@@ -454,7 +454,7 @@
               </p>
               <p>
                 <q-icon class="q-mr-xs" size="xs" name="phone" />
-                <a href="tel:+972 4 642 8832">+972 4 642 8832</a>
+                <a @click="scrollToSection" href="tel:+972 4 642 8832">+972 4 642 8832</a>
               </p>
             </div>
           </div>
@@ -476,6 +476,7 @@
 
 <script>
 
+import VueScrollTo from 'vue-scrollto';
 import { ref } from 'vue'
 import SvgIcon from '../components/SvgIcon.vue'
 export default {
@@ -496,6 +497,10 @@ export default {
   },
 
   methods: {
+    scrollToSection(sectionId) {
+      // Directly using VueScrollTo to scroll
+      VueScrollTo.scrollTo(`#${sectionId}`, 500);
+    },
     setup() {
       let navButtons = document.getElementsByClassName('nav-button')
 
@@ -510,6 +515,22 @@ export default {
             )
           }
           this.className += ' active-nav'
+        })
+      }
+
+      let navButtonsD = document.getElementsByClassName('nav-buttonD')
+
+      for (let i = 0; i < navButtonsD.length; i++) {
+        navButtonsD[i].addEventListener('click', function () {
+          let activeNav = document.getElementsByClassName('active-navD')
+
+          if (activeNav.length > 0) {
+            activeNav[0].className = activeNav[0].className.replace(
+              ' active-navD',
+              ''
+            )
+          }
+          this.className += ' active-navD'
         })
       }
 

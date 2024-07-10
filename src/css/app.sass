@@ -1,5 +1,6 @@
 // app global css in Sass form
-
+html
+  scroll-behavior: smooth
 body
   width: 100%
   height: 100svh
@@ -43,6 +44,7 @@ body
   left: 10%
   border-radius: 100px 100px 0 0
   z-index: -1
+  
 
 .hero-section-logos-contianer
   width: 20%
@@ -125,7 +127,10 @@ body
 .header-nav>ul>li>.active-nav
   color: rgb(176, 141, 16)
 
-.header-nav>ul>li>.nav-button:hover
+.header-nav>ul>li>.active-navD
+  color: rgb(176, 141, 16)
+
+.header-nav>ul>li>.nav-buttonD:hover
   color: rgb(176, 141, 16)
 
 /*  */
@@ -374,7 +379,7 @@ body
 
 
   // Mobile
-@media (max-width: 512px)
+@media (max-width: 812px)
     
   .header-parent
     display: block
@@ -766,3 +771,7 @@ body
     line-height: 2
     font-weight: 600
     // color: white
+
+.footer-main-container *
+
+.footer-main-container a
